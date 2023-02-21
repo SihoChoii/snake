@@ -6,11 +6,11 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Font;
 
-public class element
+public class element extends Snake
 {
     // element data
     private int positionX, positionY;
-    private int scale;
+    private double scale;
     private int sizeX, sizeY;
 
     private boolean updateStat;         // Update Limiter (True = Update)
@@ -20,14 +20,13 @@ public class element
     private boolean sceneDataOverlay;   // (True = On)
     private boolean debugPrint;         // (True = On)
 
-    public element(int scale, int positionX, int positionY)
+    public element(double scale, int sizeX, int sizeY, int positionX, int positionY)
     {
-        this.positionXOrigin = positionX;
-        this.positionYOrigin = positionY;
-        this.scaleOrigin = scale;
-        this.positionX = this.positionXOrigin;
-        this.positionY = this.positionYOrigin;
-        this.scale = this.caleOrigin;
+        this.positionX = positionX;
+        this.positionY = positionY;
+        this.scale = scale;
+        this.sizeX = sizeX * scale;
+        this.sizeY = sizeY * scale;
     }
 
     // Debug Functions
@@ -77,11 +76,11 @@ public class element
         this.positionX = x;
         this.positionY = y;
     }
-    public void setScale(int num) 
+    public void setScale(double num) 
     { 
         this.scale = num;
-        this.sizeX *= ((double)scale/100.0);
-        this.sizeY *= ((double)scale/100.0);
+        this.sizeX *= this.scale;
+        this.sizeY *= this.scale;
     }
 }
 

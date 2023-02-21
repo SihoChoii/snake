@@ -7,6 +7,10 @@ import element;
 
 public class gridBlock extends element
 {
+    public gridBlock()
+    {
+        super();
+    }
 
     public void divide(int division, int divX, int divY)
     {

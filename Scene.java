@@ -10,15 +10,18 @@ import element;
 public class Scene extends element
 {
     // Scene Data
-    private int sceneID;                // 0 Reserved for default
     private int sceneVariation;         // 0 Reserved for default
 
-    public Scene(int sceneID, int sceneVariation)
+    public Scene(int sceneVariation, double scale, int sizeX, int sizeY, int positionX, int positionY)
     {
-        this.sceneID = sceneID;
+        super(scale, sizeX, sizeY, positionX, positionY);
         this.sceneVariation = sceneVariation;
-
-        currentScene = new SceneList(sceneID, sceneVariation);
+    }
+    // Default Overload - Full Size Scene
+    public Scene()
+    {
+        super(1, getMaxWindowX(), getMaxWindowY(), 0, 0);
+        this.sceneVariation = 0;
     }
 
     // Getters

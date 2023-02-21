@@ -1,12 +1,12 @@
 // CSA Snake Game Project
 // Made by  : Siho Choi
 // Version  : v1
-// Date     : 2/13/2023
+// Date     : 2/21/2023
 
 // Utilities
 import utilities.GDV5;
 
-public class Snake extends GDV5
+public abstract class Snake extends GDV5
 {
     public Snake()
     {}
