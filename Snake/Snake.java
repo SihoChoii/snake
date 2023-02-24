@@ -1,3 +1,4 @@
+package Snake;
 // CSA Snake Game Project
 // Made by  : Siho Choi
 // Version  : v1
@@ -5,11 +6,15 @@
 
 // Utilities
 import utilities.GDV5;
+import java.awt.Graphics2D;
 
-public abstract class Snake extends GDV5
+public class Snake extends GDV5
 {
+    // Variables
+
     public Snake()
-    {}
+    {
+    }
     
     public static void main(String[] args)
     {

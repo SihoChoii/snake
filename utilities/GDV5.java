@@ -1,4 +1,4 @@
-// package utilities;
+package utilities;
 
 import java.awt.Canvas;
 import java.awt.Color;

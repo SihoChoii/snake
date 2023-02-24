@@ -1,11 +1,11 @@
 // Scene Object
 // Holds Scene Data
-// package scenes;
+package Snake.elements;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Font;
-import element;
+import Snake.Snake;
 
 public class Scene extends element
 {
@@ -20,15 +20,13 @@ public class Scene extends element
     // Default Overload - Full Size Scene
     public Scene()
     {
-        super(1, getMaxWindowX(), getMaxWindowY(), 0, 0);
+        super(1, Snake.getMaxWindowX(), Snake.getMaxWindowY(), 0, 0);
         this.sceneVariation = 0;
     }
 
     // Getters
-    public int getSceneID() { return this.sceneID; }
     public int getSceneVariation() { return this.sceneVariation; }
 
     // Setters
-    public void setSceneID(int num) { this.sceneID = num; }
     public void setSceneVariation(int num) { this.sceneVariation = num; }
 }
