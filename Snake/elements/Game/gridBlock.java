@@ -1,13 +1,9 @@
 // Grid Block Object
 package Snake.elements.Game;
 
-import java.awt.Rectangle;
+
 import java.awt.Graphics2D;
-import java.awt.Stroke;
-
 import Snake.elements.element;
-
-import java.awt.BasicStroke;
 
 public class gridBlock extends element
 {
@@ -22,7 +18,7 @@ public class gridBlock extends element
         win.fill(this.getRectangle());
 
         // Stroke prevStroke = win.getStroke();  TODO This shouldnt't be needed if every object sets its own stroke
-        win.setStroke(new BasicStroke(this.getBorderSize()));
+        win.setStroke(this.getStroke());
 
         win.setColor(this.getOuterColor());
         win.draw(this.getRectangle());

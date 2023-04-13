@@ -1,4 +1,4 @@
-package utilities;
+package Snake.utilities;
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -32,8 +32,8 @@ public abstract class GDV5 extends Canvas implements Runnable, KeyListener {
 
 	private int FramesPerSecond;
 	public static boolean[] KeysPressed;
-	private static int MAX_WINDOW_X = 850;
-	private static int MAX_WINDOW_Y = 1000;
+	private static int MAX_WINDOW_X = 810; // Div 15
+	private static int MAX_WINDOW_Y = 1005; // Div 15
 	private static int PADDING = 2;
 
 	// it is your responsibility to handle the release on keysTyped
@@ -41,6 +41,10 @@ public abstract class GDV5 extends Canvas implements Runnable, KeyListener {
 	private JFrame frame;
 	private String title = "Pong";
 	private boolean cleanCanvas = true;
+
+	public int getPositionX() { return frame.getLocation().x; }
+	public int getPositionY() { return frame.getLocation().y; }
+	public JFrame getFrame() { return frame; }
 
 	public GDV5(int frames) {
 		// set up all variables related to the game
